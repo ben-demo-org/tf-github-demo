@@ -37,7 +37,7 @@ module "perl-demo" {
   vulnerability_alerts   = true
 
   admin_team_ids = [
-    github_team.perl.id
+
   ]
 
   branch_protections_v3 = [
@@ -58,7 +58,7 @@ module "perl-demo" {
       }
 
       restrictions = {
-        teams = [github_team.perl.id]
+        teams = []
       }
     }
   ]
