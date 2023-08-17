@@ -12,3 +12,19 @@ module "import-test" {
   gitignore_template = "Terraform"
   visibility         = "private"
 }
+
+
+import {
+  to = module.show-import.github_repository.repository
+  id = "show-import"
+}
+
+module "show-import" {
+  source  = "mineiros-io/repository/github"
+  version = "~> 0.18.0"
+
+  name               = "show-import"
+  license_template   = "apache-2.0"
+  gitignore_template = "Terraform"
+  visibility         = "private"
+}
