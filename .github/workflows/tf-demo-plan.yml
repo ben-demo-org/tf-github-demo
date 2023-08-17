@@ -27,10 +27,6 @@ jobs:
           app_id: ${{ secrets.APP_ID }}
           private_key: ${{ secrets.APP_PEM }}
 
-      - name: Set token to env var
-        env:
-          GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
-
       - name: Checkout
         uses: actions/checkout@v3
 
@@ -63,7 +59,7 @@ jobs:
         env:
           PLAN: "terraform\n${{ steps.plan.outputs.stdout }}"
         with:
-          github-token: ${{ env.GITHUB_TOKEN }}
+          github-token: ${{ steps.generate_token.outputs.token }}
           script: |
             const output = `#### Terraform Format and Style 🖌\`${{ steps.fmt.outcome }}\`
             #### Terraform Initialization ⚙️\`${{ steps.init.outcome }}\`
