@@ -35,7 +35,7 @@ module "perl-demo" {
     "perl"
   ]
 
-  branch_protections_v4 = [
+  branch_protections_v3 = [
     {
       branch                 = "main"
       enforce_admins         = true
