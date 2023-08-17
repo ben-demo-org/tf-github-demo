@@ -10,7 +10,7 @@ module "import-test" {
   name               = "import-test"
   license_template   = "apache-2.0"
   gitignore_template = "Terraform"
-  visibility         = "private"
+  visibility         = "public"
 }
 
 
@@ -26,5 +26,5 @@ module "show-import" {
   name               = "show-import"
   license_template   = "apache-2.0"
   gitignore_template = "Terraform"
-  visibility         = "private"
+  visibility         = "public"
 }
