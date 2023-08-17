@@ -21,7 +21,7 @@ module "perl-demo" {
 
   name                   = "perl-demo"
   license_template       = "apache-2.0"
-  visibility             = "private"
+  visibility             = "public"
   description            = "perl-demo"
   homepage_url           = "https://github.com/ben-demo-org/perl-demo"
   topics                 = ["random", "stuff"]
