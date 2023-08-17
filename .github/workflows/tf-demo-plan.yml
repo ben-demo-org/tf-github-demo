@@ -23,6 +23,9 @@ jobs:
       contents: read
       issues: write
       pull-requests: write
+    defaults:
+      run:
+        working-directory: ./teams
     steps:
       - name: Generate a token
         id: generate_token
