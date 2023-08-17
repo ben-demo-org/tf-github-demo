@@ -7,7 +7,7 @@ env:
   TF_CLOUD_ORGANIZATION: "Corvius"
   TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"
   TF_WORKSPACE: "github-demo"
-  CONFIG_DIRECTORY: "./"
+  CONFIG_DIRECTORY: "."
   GITHUB_APP_ID: "${{ secrets.APP_ID }}"
   GITHUB_APP_INSTALLATION_ID: "${{ secrets.INSTALL_ID }}"
   GITHUB_APP_PEM_FILE: "${{ secrets.APP_PEM }}"
