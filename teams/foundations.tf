@@ -8,10 +8,12 @@ module "repository" {
   visibility         = "private"
 }
 
+/*
 import {
   to = module.perl-demo.github_team_repository.team_repository
-  id = "perl:perl-demo"
+  id = "${github_team.perl.id}:perl-demo"
 }
+*/
 
 module "perl-demo" {
   source  = "mineiros-io/repository/github"
@@ -35,7 +37,7 @@ module "perl-demo" {
   vulnerability_alerts   = true
 
   admin_team_ids = [
-    "perl"
+
   ]
 
   branch_protections_v3 = [
@@ -56,7 +58,7 @@ module "perl-demo" {
       }
 
       restrictions = {
-        teams = ["perl"]
+        teams = []
       }
     }
   ]
