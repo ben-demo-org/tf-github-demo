@@ -8,7 +8,10 @@ module "repository" {
   visibility         = "private"
 }
 
-
+import {
+  to = module.perl-demo.github_team_repository.team_repository
+  id = "perl:perl-demo"
+}
 
 module "perl-demo" {
   source  = "mineiros-io/repository/github"
