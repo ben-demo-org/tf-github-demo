@@ -19,7 +19,7 @@ module "perl-demo" {
   visibility             = "private"
   description            = "perl-demo"
   homepage_url           = "https://github.com/ben-demo-org/perl-demo"
-  topics                 = ["random","stuff" ]
+  topics                 = ["random", "stuff"]
   has_issues             = true
   has_projects           = true
   has_wiki               = true
@@ -35,10 +35,10 @@ module "perl-demo" {
     "perl"
   ]
 
-  branch_protections_v4 = [
+  branch_protections_v3 = [
     {
-      branch                 = "main"
-      enforce_admins         = true
+      branch         = "main"
+      enforce_admins = true
 
       required_status_checks = {
         strict   = true
@@ -57,5 +57,4 @@ module "perl-demo" {
       }
     }
   ]
-
 }
