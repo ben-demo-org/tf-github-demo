@@ -5,5 +5,5 @@ module "repository" {
   name               = "demo-repo"
   license_template   = "apache-2.0"
   gitignore_template = "Terraform"
-  visibility         = "internal"
+  visibility         = "private"
 }
