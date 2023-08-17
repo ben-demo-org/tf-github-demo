@@ -34,7 +34,7 @@ jobs:
           speculative: true
 
       - name: Where am I
-        run: pwd
+        run: ls -al
         shell: bash
 
       - name: Create Plan Run
