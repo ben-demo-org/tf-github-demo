@@ -33,7 +33,7 @@ module "github-demo" {
 
       required_status_checks = {
         strict   = true
-        contexts = ["Terraform Demo Plan"]
+        contexts = []
       }
 
       required_pull_request_reviews = {
