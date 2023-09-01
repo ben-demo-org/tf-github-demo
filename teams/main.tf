@@ -26,7 +26,7 @@ module "github-demo" {
 
   admin_team_ids = [github_team.engineers.id]
 
-  branch_protections_v3 = [
+  branch_protections_v4 = [
     {
       branch         = "main"
       enforce_admins = true
@@ -48,7 +48,7 @@ module "github-demo" {
       }
     },
     {
-      branch         = "feature/*"
+      pattern        = "feature/*"
       enforce_admins = true
 
       required_status_checks = {
@@ -93,7 +93,7 @@ module "discord-bot" {
 
   admin_team_ids = []
 
-  branch_protections_v3 = [
+  branch_protections_v4 = [
     {
       branch         = "main"
       enforce_admins = true
