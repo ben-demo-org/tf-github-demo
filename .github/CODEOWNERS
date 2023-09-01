@@ -1,0 +1,4 @@
+# Manage Team ownership of specific files
+
+teams/perl-team.tf @perl
+teams/main.tf @engineers

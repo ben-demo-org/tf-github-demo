@@ -24,7 +24,7 @@ module "github-demo" {
   delete_branch_on_merge = true
   vulnerability_alerts   = true
 
-  admin_team_ids = []
+  admin_team_ids = [github_team.engineers.id]
 
   branch_protections_v3 = [
     {
@@ -33,7 +33,7 @@ module "github-demo" {
 
       required_status_checks = {
         strict   = true
-        contexts = []
+        contexts = ["Terraform Demo Plan"]
       }
 
       required_pull_request_reviews = {
@@ -44,7 +44,27 @@ module "github-demo" {
       }
 
       restrictions = {
-        teams = []
+        teams = [github_team.engineers.slug]
+      }
+    },
+    {
+      branch         = "feature/*"
+      enforce_admins = true
+
+      required_status_checks = {
+        strict   = true
+        contexts = ["Terraform Demo Plan"]
+      }
+
+      required_pull_request_reviews = {
+        dismiss_stale_reviews           = true
+        dismissal_users                 = ["benpngo"]
+        require_code_owner_reviews      = true
+        required_approving_review_count = 1
+      }
+
+      restrictions = {
+        teams = [github_team.engineers.slug]
       }
     }
   ]
