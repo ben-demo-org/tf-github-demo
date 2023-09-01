@@ -38,7 +38,7 @@ module "github-demo" {
 
       required_pull_request_reviews = {
         dismiss_stale_reviews           = true
-        pull_request_bypassers          = ["benpngo"]
+        pull_request_bypassers          = ["/benpngo"]
         require_code_owner_reviews      = true
         required_approving_review_count = 1
       }
@@ -58,7 +58,7 @@ module "github-demo" {
 
       required_pull_request_reviews = {
         dismiss_stale_reviews           = true
-        pull_request_bypassers          = ["benpngo"]
+        pull_request_bypassers          = ["/benpngo"]
         require_code_owner_reviews      = true
         required_approving_review_count = 1
       }
@@ -102,7 +102,7 @@ module "discord-bot" {
 
       required_pull_request_reviews = {
         dismiss_stale_reviews           = true
-        pull_request_bypassers          = ["ben-demo-org/benpngo"]
+        pull_request_bypassers          = ["/benpngo"]
         require_code_owner_reviews      = true
         required_approving_review_count = 1
       }
