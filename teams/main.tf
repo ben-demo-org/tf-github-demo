@@ -9,7 +9,7 @@ module "github-demo" {
   version = "~> 0.18.0"
 
   name                   = "tf-github-demo"
-  visibility             = "private"
+  visibility             = "public"
   description            = "Demo"
   homepage_url           = "https://github.com/ben-demo-org/tf-github-demo"
   topics                 = ["random", "stuff"]
