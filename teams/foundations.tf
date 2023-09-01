@@ -8,19 +8,18 @@ module "repository" {
   visibility         = "private"
 }
 
-/*
+
 import {
   to = module.perl-demo.github_team_repository.team_repository
-  id = "${github_team.perl.id}:perl-demo"
+  id = "perl:perl-demo"
 }
-*/
+
 
 module "perl-demo" {
   source  = "mineiros-io/repository/github"
   version = "~> 0.18.0"
 
   name                   = "perl-demo"
-  license_template       = "apache-2.0"
   visibility             = "public"
   description            = "perl-demo"
   homepage_url           = "https://github.com/ben-demo-org/perl-demo"
@@ -37,7 +36,7 @@ module "perl-demo" {
   vulnerability_alerts   = true
 
   admin_team_ids = [
-
+    "perl"
   ]
 
   branch_protections_v3 = [
@@ -88,7 +87,7 @@ module "perl-show" {
   vulnerability_alerts   = true
 
   admin_team_ids = [
-
+    "perl"
   ]
 
   branch_protections_v3 = [
@@ -109,7 +108,7 @@ module "perl-show" {
       }
 
       restrictions = {
-        teams = []
+        teams = ["perl"]
       }
     }
   ]
